@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as usersService from '../../utilities/users-service';
+import './NavBar.css';
 
 export default function NavBar(props) {
 
@@ -10,14 +11,17 @@ export default function NavBar(props) {
   }
 
   return (
+    <>
+    <h1>Films&Flix</h1>
     <nav>
-      <Link to="/orders">Order History</Link>
+      <Link to="/movies">Movies</Link>
       &nbsp; | &nbsp;
-      <Link to="/orders/new">New Order</Link>
+      <Link to="/movies/myreviews">My Reviews</Link>
       &nbsp; | &nbsp;
       <span>Welcome, {props.user.name}</span>
       &nbsp; | &nbsp;
       <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
+    </>
   );
-}
+} 
