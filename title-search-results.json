@@ -1,0 +1,56 @@
+{
+    "searchType": "Title",
+    "expression": "eternals",
+    "results": [
+      {
+        "id": "tt9032400",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/MV5BMTExZmVjY2ItYTAzYi00MDdlLWFlOWItNTJhMDRjMzQ5ZGY0XkEyXkFqcGdeQXVyODIyOTEyMzY@._V1_Ratio0.7273_AL_.jpg",
+        "title": "Eternals",
+        "description": "(2021)"
+      },
+      {
+        "id": "tt4118878",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/MV5BNGE3ODRjMDYtMThkOC00MDBiLWJkNGQtMTg0MDcyNDI3ODVmXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_Ratio0.7273_AL_.jpg",
+        "title": "Eternals",
+        "description": "(2014) (TV Mini Series)"
+      },
+      {
+        "id": "tt4058600",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/MV5BMzA1ZTAxYjQtYzQzNy00N2QzLThjZTMtMWU1NGM3YWFhYmU2XkEyXkFqcGdeQXVyMjMxMDM2NjY@._V1_Ratio0.7273_AL_.jpg",
+        "title": "Marvel Knights: Eternals",
+        "description": "(2014) (Video)"
+      },
+      {
+        "id": "tt1357396",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/nopicture.jpg",
+        "title": "Eternals",
+        "description": "(2008) (Short)"
+      },
+      {
+        "id": "tt1667192",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/MV5BODRhNjFlYmYtNmY3ZC00MGZjLThjYWEtMTE2ODNlZmI4NTQyXkEyXkFqcGdeQXVyMzYwMTkzNTQ@._V1_Ratio0.7273_AL_.jpg",
+        "title": "Eternalsoul.org",
+        "description": "(2010) (Short)"
+      },
+      {
+        "id": "tt0382019",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/MV5BMzgxNDI0NzQ3NF5BMl5BanBnXkFtZTcwNDI2MDEzMQ@@._V1_Ratio0.7273_AL_.jpg",
+        "title": "Eternal",
+        "description": "(2004)"
+      },
+      {
+        "id": "tt6849036",
+        "resultType": "Title",
+        "image": "https://imdb-api.com/images/original/MV5BZjU4OWQ5ZGEtY2Q2Mi00MDZlLWFkYjEtZGZhYTExNDBmYmEyXkEyXkFqcGdeQXVyNzI4MDMyMTU@._V1_Ratio0.7273_AL_.jpg",
+        "title": "The Eternals",
+        "description": "(2017)"
+      }
+    ],
+    "errorMessage": ""
+  }
