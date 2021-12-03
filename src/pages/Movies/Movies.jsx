@@ -41,7 +41,7 @@ export default function Movies({movies, setMovies}) {
       </form>
       <div className="MovieSearch">
         {movies.map((m, idx)=> (
-          <Link to={`/movies/${m.id}`} onClick={() => movieDetail(m.id)} idx={m.id} movies={movies}>
+          <Link to={`/movies/${m.id}`} onClick={() => movieDetail(m.id)} idx={m.id} movies={movies} key={idx}>
             <div className="SearchPosters">
               <h1> {m.title}</h1>
               <img src={m.image} alt={m.title} width="300" />

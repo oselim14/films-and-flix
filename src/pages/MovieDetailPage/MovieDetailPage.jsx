@@ -3,7 +3,7 @@ import * as moviesAPI from '../../utilities/movies-api';
 import { useEffect } from 'react/cjs/react.development';
 
 export default function MovieDetailPage({idx, setMovieId}) {
-   
+   console.log(idx)
     // useEffect(function(){
     //     async function movieDetail(movieId){
     //         console.log(movieId);
