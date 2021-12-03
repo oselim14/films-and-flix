@@ -1,0 +1,14 @@
+.SearchPosters {
+   
+    border-radius: 2vmin;
+    margin: 15px;
+}
+.SearchPosters h1 {
+    background-color: #219EBC;
+    border-radius: 3px;
+}
+
+.MovieSearch{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

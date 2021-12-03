@@ -2,9 +2,11 @@ const fetch = require('node-fetch');
 const Movie = require('../../models/movie');
 
 const SEARCH_URL = `https://imdb-api.com/en/API/SearchTitle/${process.env.API_KEY}`;
+const TITLE_URL = `https://imdb-api.com/en/API/Title/${process.env.API_KEY}`
 
 module.exports = {
     search,
+    detail,
 };
 
 async function search(req, res) {
@@ -16,4 +18,11 @@ async function search(req, res) {
         console.log(e);
         res.json('Error occurred accessing IMDb');
     }
+}
+
+async function detail(req, res) {
+    const url = `${TITLE_URL}/${req.body.id}`;
+    const result = await fetch(url).then((res)=> res.json());
+    res.json(result);
+    console.log(result);
 }

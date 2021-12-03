@@ -7,3 +7,6 @@ export async function search(search) {
     return sendRequest(`${BASE_URL}/search?search=${search}`);
 }
 
+export async function detail(search){
+    return sendRequest(`${BASE_URL}/detail?search=${search}`);
+}
