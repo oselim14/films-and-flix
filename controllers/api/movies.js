@@ -21,8 +21,7 @@ async function search(req, res) {
 }
 
 async function detail(req, res) {
-    const url = `${TITLE_URL}/${req.body.id}`;
+    const url = `${TITLE_URL}/${req.params.id}`;
     const result = await fetch(url).then((res)=> res.json());
     res.json(result);
-    console.log(result);
 }

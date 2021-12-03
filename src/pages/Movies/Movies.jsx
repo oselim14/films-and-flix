@@ -19,15 +19,6 @@ export default function Movies({movies, setMovies}) {
       const results = await moviesAPI.search(searchTerm);
       setMovies(results);
     }
-
-    async function movieDetail(idx){
-      setMovieId(idx);
-      console.log(idx);
-      // const movie = await moviesAPI.detail(idx);
-      // const movieIdx= movie[0]
-      // setMovieId(movieIdx);
-      // console.log(idx)
-    }
  
 
   return (
@@ -40,8 +31,8 @@ export default function Movies({movies, setMovies}) {
         </button>
       </form>
       <div className="MovieSearch">
-        {movies.map((m, idx)=> (
-          <Link to={`/movies/${m.id}`} onClick={() => movieDetail(m.id)} idx={m.id} movies={movies} key={idx}>
+        {movies.map((m)=> (
+          <Link to={`/movies/${m.id}`} key={m.id}>
             <div className="SearchPosters">
               <h1> {m.title}</h1>
               <img src={m.image} alt={m.title} width="300" />

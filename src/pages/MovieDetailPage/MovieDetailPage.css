@@ -1,0 +1,30 @@
+.Team {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.TitleCard{
+    background-color: #8ECAE6;
+    width: 75%;
+    margin: 25px;
+    height: 25%;
+}
+
+body{
+    display: grid;
+}
+
+aside{
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.TeamAndPic{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    margin: 25px
+}

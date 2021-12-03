@@ -7,7 +7,9 @@ const movieSchema = new Schema ({
     producer: String,
     releaseYear: Number,
     description: String,
-    user: {type: Schema.Types.ObjectId, ref: 'User'},
-})
+    review: {type: Schema.Types.ObjectId, ref: 'Review'},
+}, {
+    timestamps:true
+});
 
 module.exports = mongoose.model('Movie', movieSchema);
