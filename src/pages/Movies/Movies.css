@@ -12,3 +12,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.MovieSearchForm{
+    display: flex;
+    justify-self: center;
+    background-color: #8ECAE6;
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    border: 8px solid #219EBC;
+    border-radius: 2vmin;
+    padding: 15px;
+}
+
+.mainPortion {
+    display: flex;
+    justify-content: center;
+}
+
+.CenterForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

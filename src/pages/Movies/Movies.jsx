@@ -24,12 +24,14 @@ export default function Movies({movies, setMovies}) {
   return (
     <>
       <h1>Movies</h1>
-      <form onSubmit={handleSubmit}>
+      <div className="CenterForm">
+      <form onSubmit={handleSubmit} className="MovieSearchForm">
         <input type="text" onChange={search} value={searchTerm} required />
         <button type="submit" value="submit">
           Search
         </button>
       </form>
+      <div className="mainPortion">
       <div className="MovieSearch">
         {movies.map((m)=> (
           <Link to={`/movies/${m.id}`} key={m.id}>
@@ -39,6 +41,8 @@ export default function Movies({movies, setMovies}) {
             </div>
           </Link> 
         ))}
+      </div>
+      </div>
       </div>
     </>
   );

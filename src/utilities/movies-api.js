@@ -10,3 +10,7 @@ export async function search(search) {
 export async function detail(id){
     return sendRequest(`${BASE_URL}/${id}`);
 }
+
+export async function addMovie(id){
+    return sendRequest(`${BASE_URL}/${id}`);
+}

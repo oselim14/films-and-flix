@@ -7,6 +7,7 @@ const TITLE_URL = `https://imdb-api.com/en/API/Title/${process.env.API_KEY}`
 module.exports = {
     search,
     detail,
+    addMovie,
 };
 
 async function search(req, res) {
@@ -24,4 +25,10 @@ async function detail(req, res) {
     const url = `${TITLE_URL}/${req.params.id}`;
     const result = await fetch(url).then((res)=> res.json());
     res.json(result);
+}
+
+async function addMovie(req, res) {
+    const movie = await Movie.getMovie(req.params.id);
+    await movie.addReview(req.params.id);
+    res.json(movie);
 }

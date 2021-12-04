@@ -3,6 +3,8 @@ import * as moviesAPI from '../../utilities/movies-api';
 import { useEffect, useState } from 'react/cjs/react.development';
 import {useParams} from 'react-router-dom';
 import './MovieDetailPage.css';
+import MyReviews from '../MyReviews/MyReviews';
+import UserReviewForm from '../../components/UserReviewForm/UserReviewForm'
 
 export default function MovieDetailPage() {
     
@@ -10,8 +12,6 @@ export default function MovieDetailPage() {
     const {id: movieId} = useParams();
 
     const IMDB_LINK = `https://www.imdb.com/title/${movieId}/?ref_=fn_al_tt_1`
-  
-    console.log(movieId);
 
     useEffect(function(){
         async function movieDetail(){
@@ -25,6 +25,11 @@ export default function MovieDetailPage() {
     return(
         <>
             <div className="TeamAndPic">
+                <aside>
+                    <img src={viewMovie.image} alt={viewMovie.title} width="500"/>
+                    <a href={IMDB_LINK} target="_blank">Find it on IMDB</a>
+                </aside>
+                    <div className="right-side">
                 <div className="TitleCard">   
                     <h1>{viewMovie.title}</h1> 
                     <div className="Team">
@@ -46,12 +51,10 @@ export default function MovieDetailPage() {
                             ))}</h4>
                     </div>
                 </div> 
-                <aside>
-                    <img src={viewMovie.image} alt={viewMovie.title} width="500"/>
-                    <a href={IMDB_LINK} target="_blank">Find it on IMDB</a>
-                </aside>
+            <h4 className="Plot"><span className="PlotTitle">Plot</span><br/>{viewMovie.plot}</h4>
+            <UserReviewForm viewMovie={viewMovie} idx={viewMovie.id}/>
             </div>
-            <h4>{viewMovie.plot}</h4>
+            </div>
         </>
     )
 }
