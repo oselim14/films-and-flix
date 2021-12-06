@@ -35,24 +35,20 @@ export default function MovieDetailPage() {
                     <div className="Team">
                         <h4 className="Directors">
                             <span className="DirectorsTitle">Directors</span><br />
-                            {viewMovie.directorList.map(d =>
-                                <div>{d.name}</div>
-                                )}</h4>
+                                <div>{viewMovie.directors}</div>
+                            </h4>
                         <h4 className="Writers">
                         <span className="WritersTitle">Writers</span><br />
-                            {viewMovie.writerList.map((w)=>
-                                <div>{w.name}</div>
-                            )}
+                                <div>{viewMovie.writers}</div>
                             </h4>
                         <h4 className="Cast">
                         <span className="CastTitle">Cast</span><br />
-                            {viewMovie.starList.map((s)=>(
-                                <div>{s.name}</div>
-                            ))}</h4>
+                                <div>{viewMovie.stars}</div>
+                        </h4>
                     </div>
                 </div> 
-            <h4 className="Plot"><span className="PlotTitle">Plot</span><br/>{viewMovie.plot}</h4>
-            <UserReviewForm viewMovie={viewMovie} idx={viewMovie.id}/>
+            <h4 className="Plot"><span className="PlotTitle">Plot</span><br/>{viewMovie.description}</h4>
+            <UserReviewForm viewMovie={viewMovie} setViewMovie={setViewMovie} />
             </div>
             </div>
         </>

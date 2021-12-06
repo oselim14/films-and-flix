@@ -5,7 +5,7 @@ const moviesCtrl = require('../../controllers/api/movies');
 // GET to /api/movies/search
 router.get('/search', moviesCtrl.search);
 // Get to /api/movies/:id
-router.get('/:id', moviesCtrl.detail);
+router.get('/:IMDBid', moviesCtrl.detail);
 //POST to /api/movies/:id
 router.post('/:id', moviesCtrl.addMovie);
 

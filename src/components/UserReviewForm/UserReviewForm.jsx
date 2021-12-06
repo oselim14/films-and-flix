@@ -1,35 +1,29 @@
 import React, { Component, useState } from 'react';
 import * as reviewsAPI from '../../utilities/reviews-api';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export default function ReviewForm({viewMovie, idx}){
+export default function ReviewForm({viewMovie, setViewMovie}){
 
-    const [review, setReview] = useState({
-        rating: '5',
-        review: '',
-    });
+    const [review, setReview] = useState('');
+    const [rating, setRating] = useState('5');
 
-    const navigate = useNavigate();
-
-    function handleChange(evt) {
-        setReview(evt.target.value);
-    }
-
-    async function addReview(movieId) {
-        // const reviews = {
-        //     method: 'POST',
-        //     headers: {'Content-Type': 'application/json'},
-        //     body: JSON.stringify({reviews})
-        // };
-        const res = await reviewsAPI.create(movieId);
-        setReview(res);
+    async function addReview(evt) {
+        evt.preventDefault();
+        const updatedMovie = await reviewsAPI.create({
+            movieId: viewMovie._id,
+            review,
+            rating
+        });
+        setViewMovie(updatedMovie);
+        setReview('');
+        setRating('5')
     }
 
     return(
         <>
-            <form onSubmit={() => addReview(viewMovie._id)} className="ReviewForm">
+            <form onSubmit={addReview} className="ReviewForm">
                 <label>Rating:
-                    <select name="rating" value={review.rating} onChange={handleChange}>
+                    <select name="rating" value={rating} onChange={(evt)=> setRating(evt.target.value)}>
                         <option value="5">5</option>
                         <option value="4">4</option>
                         <option value="3">3</option>
@@ -38,7 +32,7 @@ export default function ReviewForm({viewMovie, idx}){
                     </select>
                 </label>
                 <label>Review
-                <input type="text" name="review" value={review.review} onChange={handleChange} /> </label>
+                <input type="text" name="review" value={review} onChange={(evt)=> setReview(evt.target.value)} /> </label>
                 <button type="submit">Submit Review</button>
             </form>
         </>

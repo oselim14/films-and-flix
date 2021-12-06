@@ -1,6 +1,9 @@
 import sendRequest from "./send-request";
 
 
-export function create(IMDBid, review){
-    return sendRequest(`/api/movies/${IMDBid}/reviews`, 'POST', review);
+export function create({movieId, rating, review}){
+    return sendRequest(`/api/movies/${movieId}/reviews`, 'POST', {
+        review,
+        rating
+    });
 }
