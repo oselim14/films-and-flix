@@ -3,10 +3,16 @@
     border-radius: 2vmin;
     margin: 15px;
 }
+
 .SearchPosters h1 {
     background-color: #219EBC;
     border-radius: 3px;
+    padding: 0px 5px;
+    margin: 15px;
+    color: navy;
+    text-decoration: none;
 }
+
 
 .MovieSearch{
     display: grid;
@@ -43,4 +49,9 @@
     color: white;
     font-family: 'Permanent Marker', cursive;
     font-size: 35px;
+}
+
+.InTheaters{
+    font-size: 35px;
+    margin-bottom: 0;
 }

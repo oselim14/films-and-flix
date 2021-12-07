@@ -20,10 +20,10 @@ export default function App() {
           <NavBar user={user} setUser={setUser} />
           <Routes>
             {/* client-side route that renders the component instance if the path matches the url in the address bar */}
-            <Route path="/movies/myreviews" element={<MyReviews />} />
             <Route path="/movies" element={<Movies movies={movies} setMovies={setMovies}/>} />
             <Route path="/" element={<HomePage movies={movies} setMovies={setMovies}/>} />
             <Route path="/movies/:id" element={<MovieDetailPage />} />
+            <Route path="/movies/myreviews" element={<MyReviews />} />
           </Routes>
         </>
         :

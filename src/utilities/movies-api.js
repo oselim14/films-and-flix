@@ -18,7 +18,3 @@ export async function detail(id){
 export async function addMovie(id){
     return sendRequest(`${BASE_URL}/${id}`);
 }
-
-// export async function update(id){
-//     return sendRequest(`${BASE_URL}/${id}`, 'PUT', {id})
-// }

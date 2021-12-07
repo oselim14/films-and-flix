@@ -20,7 +20,6 @@ async function create(req, res) {
 
 async function deleteReview(req, res){
     const movie = await Movie.findOne({'reviews._id': req.params.id, 'reviews.userId': req.user._id});
-    console.log(movie);
     movie.reviews.remove(req.params.id);
     movie.save();
     res.json(movie);

@@ -8,7 +8,7 @@
     background-color: #8ECAE6;
     width: 75%;
     margin: 25px;
-    margin-top: 0;
+    margin-top: 25px;
     height: 35%;
     border: 8px solid #219EBC;
     border-radius: 2vmin;
@@ -26,6 +26,8 @@ aside{
     border: 8px solid #219EBC;
     border-radius: 2vmin;
     height: fit-content;
+    margin-top: 25px;
+    margin: 25px 50px;
 }
 
 .TeamAndPic{
@@ -41,6 +43,7 @@ aside{
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+
 }
 
 .Plot {
@@ -48,6 +51,9 @@ aside{
     width: 75%;
     border: 8px solid #219EBC;
     padding: 15px;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
     border-radius: 2vmin;
 }
 
@@ -79,15 +85,58 @@ span {
 }
 
 .ReviewTable{
-    font-size: 35px;
+    text-decoration: underline;
     display: flex;
     justify-content: space-between;
     width: 67vmin;
 }
 
+.ReviewTable span {
+    font-size: 35px;
+  
+    color: lightgrey;
+    font-family: 'Source Code Pro', monospace;
+}
+
 .ReviewMiddle{
-    font-size: 20;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 65vmin;
+}
+
+.ReviewMiddle button {
+    font-size:  1vmin;
+}
+
+.TitleCard h1 {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+.ReviewForm h2 {    
+    font-size: 2em;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    margin-top: 0;
+}
+
+.ReviewForm label {
+    color: #404040;
+    margin-right: 5px;
+}
+
+.ReviewsTitle{
+    font-size: 2em;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    align-self: center;
+}
+
+.ReviewsDisplay{
+    align-self: center;
 }

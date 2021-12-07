@@ -1,37 +1,24 @@
-.SearchPosters {
+.SearchPostersReviews {
    display: flex;
    flex-direction: column;
    align-items: center;
     border-radius: 2vmin;
     margin: 15px;
+    border: solid 2px navy;
 }
-.SearchPosters h1 {
+.SearchPostersReviews h1 {
     background-color: #219EBC;
     border-radius: 3px;
+    padding: 0px 5px;
+    margin: 15px;
+    color: navy;
+    text-decoration: none;
 }
 
-.MovieSearch{
+.MovieSearchReviews{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-}
-
-
-.mainPortion {
-    display: flex;
-    justify-content: center;
-}
-
-.CenterForm {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.MovieToSearch {
-    color: white;
-    font-family: 'Permanent Marker', cursive;
-    font-size: 35px;
+    width:fit-content;
 }
 
 .ReviewMiddleReviews {
@@ -39,4 +26,22 @@
     display: flex;
     justify-content: space-around;
     width: 45vmin;
+    margin: 7px;
+}
+
+.MainPortionReviews {
+    display: flex;
+    justify-content: center;
+}
+
+.MovieReviews {
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 35px;
+}
+
+.Reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }

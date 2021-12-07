@@ -12,7 +12,8 @@ Nav{
 
 Nav a {
     color: white;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 25px;
 }
 
 Nav a:hover {
@@ -21,7 +22,7 @@ Nav a:hover {
 
 span {
     color: white;
-    font-family: 'Permanent Marker', cursive;
+    font-family: 'Source Code Pro', monospace;
 }
 
 .Title {
