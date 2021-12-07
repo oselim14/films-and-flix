@@ -24,6 +24,7 @@ aside{
     background-color: #219EBC;
     border: 8px solid #219EBC;
     border-radius: 2vmin;
+    height: fit-content;
 }
 
 .TeamAndPic{
@@ -54,6 +55,7 @@ aside{
     width: 75%;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     align-items: center;
     color: black;
     border: 8px solid #219EBC;
@@ -73,4 +75,18 @@ aside > a {
 
 span {
     font-size: 25px;
+}
+
+.ReviewTable{
+    font-size: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 67vmin;
+}
+
+.ReviewMiddle{
+    font-size: 20;
+    display: flex;
+    justify-content: space-between;
+    width: 65vmin;
 }

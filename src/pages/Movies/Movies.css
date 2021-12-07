@@ -38,3 +38,9 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+.MovieToSearch {
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 35px;
+}

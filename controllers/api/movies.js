@@ -4,10 +4,14 @@ const Movie = require('../../models/movie');
 const SEARCH_URL = `https://imdb-api.com/en/API/SearchTitle/${process.env.API_KEY}`;
 const TITLE_URL = `https://imdb-api.com/en/API/Title/${process.env.API_KEY}`
 
+const TOP_URL = `https://imdb-api.com/en/API/BoxOffice/${process.env.API_KEY}`
+
 module.exports = {
     search,
     detail,
     addMovie,
+    update,
+    topMovies,
 };
 
 async function search(req, res) {
@@ -21,11 +25,11 @@ async function search(req, res) {
     }
 }
 
-// async function detail(req, res) {
-//     const url = `${TITLE_URL}/${req.params.id}`;
-//     const result = await fetch(url).then((res)=> res.json());
-//     res.json(result);
-// }
+async function topMovies(req, res) {
+    const url = `${TOP_URL}`;
+    const results = await fetch(url).then((res)=> res.json());
+    res.json(results.items);
+}
 
 async function addMovie(req, res) {
     const movie = await Movie.getMovie(req.params.id);
@@ -53,4 +57,18 @@ async function detail(req, res) {
        });
     }
     res.json(movie);
+}
+
+async function update(req, res){
+    const updatedMovie = await Movie.findByIdAndUpdate(
+        {_id: req.params.id, user: req.user._id},
+        req.body,
+        {new: true},
+        function(err, movie) {
+            if (err || !movie) return
+            movie.reviews.remove(req.params.id);
+            movie.save();
+        }
+        )
+    res.json(updatedMovie);
 }

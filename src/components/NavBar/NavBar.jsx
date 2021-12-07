@@ -12,7 +12,7 @@ export default function NavBar(props) {
 
   return (
     <>
-    <h1>Films&Flix</h1>
+    <Link to="/" className="Title">Films&Flix</Link>
     <nav>
       <Link to="/movies">Movies</Link>
       &nbsp; | &nbsp;

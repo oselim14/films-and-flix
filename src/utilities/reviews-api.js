@@ -7,3 +7,7 @@ export function create({movieId, rating, review}){
         rating
     });
 }
+
+export function deleteReview({id}){
+    return sendRequest(`/api/reviews/${id}`, 'DELETE')
+}

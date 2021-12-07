@@ -23,7 +23,7 @@ export default function Movies({movies, setMovies}) {
 
   return (
     <>
-      <h1>Movies</h1>
+      <h1 className="MovieToSearch">Movies</h1>
       <div className="CenterForm">
       <form onSubmit={handleSubmit} className="MovieSearchForm">
         <input type="text" onChange={search} value={searchTerm} required />

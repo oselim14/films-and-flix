@@ -1,6 +1,6 @@
 import Movies from '../Movies/Movies';
 import * as moviesAPI from '../../utilities/movies-api';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { Fragment, useEffect, useState } from 'react/cjs/react.development';
 import {useParams} from 'react-router-dom';
 import './MovieDetailPage.css';
 import MyReviews from '../MyReviews/MyReviews';
@@ -35,15 +35,21 @@ export default function MovieDetailPage() {
                     <div className="Team">
                         <h4 className="Directors">
                             <span className="DirectorsTitle">Directors</span><br />
-                                <div>{viewMovie.directors}</div>
+                                <div>{viewMovie.directors.split(',').map((d, index) => (
+                                    <div>{!!index}<br />{d}</div>
+                                ))}</div>
                             </h4>
                         <h4 className="Writers">
                         <span className="WritersTitle">Writers</span><br />
-                                <div>{viewMovie.writers}</div>
+                                <div>{viewMovie.writers.split(',').map((d, index) => (
+                                    <div>{!!index}<br />{d}</div>
+                                ))}</div>
                             </h4>
                         <h4 className="Cast">
                         <span className="CastTitle">Cast</span><br />
-                                <div>{viewMovie.stars}</div>
+                                <div>{viewMovie.stars.split(',').map((d, index) => (
+                                    <div>{!!index}<br />{d}</div>
+                                ))}</div>
                         </h4>
                     </div>
                 </div> 

@@ -1,0 +1,26 @@
+.SearchPosters {
+   
+    border-radius: 2vmin;
+    margin: 15px;
+}
+.SearchPosters h1 {
+    background-color: #219EBC;
+    border-radius: 3px;
+}
+
+.TopMovies{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.mainPortion {
+    display: flex;
+    justify-content: center;
+}
+
+.InTheaters {
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 35px;
+}

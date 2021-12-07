@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { getUser } from '../../utilities/users-service';
 import AuthPage from '../AuthPage/AuthPage';
+import HomePage from '../HomePage/HomePage';
 import MyReviews from '../MyReviews/MyReviews';
 import Movies from '../Movies/Movies';
 import NavBar from '../../components/NavBar/NavBar';
@@ -21,6 +22,7 @@ export default function App() {
             {/* client-side route that renders the component instance if the path matches the url in the address bar */}
             <Route path="/movies/myreviews" element={<MyReviews />} />
             <Route path="/movies" element={<Movies movies={movies} setMovies={setMovies}/>} />
+            <Route path="/" element={<HomePage movies={movies} setMovies={setMovies}/>} />
             <Route path="/movies/:id" element={<MovieDetailPage />} />
           </Routes>
         </>
