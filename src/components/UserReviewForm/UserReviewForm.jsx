@@ -1,6 +1,5 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import * as reviewsAPI from '../../utilities/reviews-api';
-import { Link } from 'react-router-dom';
 
 export default function ReviewForm({viewMovie, setViewMovie}){
 

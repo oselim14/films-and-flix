@@ -1,15 +1,16 @@
 .SearchPosters {
-   
+   display: flex;
+   flex-direction: column;
+   align-items: center;
     border-radius: 2vmin;
     margin: 15px;
 }
 .SearchPosters h1 {
     background-color: #219EBC;
     border-radius: 3px;
-    width: -webkit-fill-available;
 }
 
-.TopMovies{
+.MovieSearch{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -20,8 +21,22 @@
     justify-content: center;
 }
 
-.InTheaters {
+.CenterForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.MovieToSearch {
     color: white;
     font-family: 'Permanent Marker', cursive;
     font-size: 35px;
+}
+
+.ReviewMiddleReviews {
+    font-size: 20;
+    display: flex;
+    justify-content: space-around;
+    width: 45vmin;
 }

@@ -6,6 +6,7 @@ const TITLE_URL = `https://imdb-api.com/en/API/Title/${process.env.API_KEY}`
 module.exports = {
     create,
     deleteReview,
+    index,
 }
 
 async function create(req, res) {
@@ -23,4 +24,9 @@ async function deleteReview(req, res){
     movie.reviews.remove(req.params.id);
     movie.save();
     res.json(movie);
+}
+
+async function index(req, res) {
+    const movies = await Movie.find({'reviews.userId': req.user._id});
+    res.json(movies);
 }

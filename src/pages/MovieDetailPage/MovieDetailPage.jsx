@@ -1,9 +1,7 @@
-import Movies from '../Movies/Movies';
 import * as moviesAPI from '../../utilities/movies-api';
-import { Fragment, useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react/cjs/react.development';
 import {useParams} from 'react-router-dom';
 import './MovieDetailPage.css';
-import MyReviews from '../MyReviews/MyReviews';
 import UserReviewForm from '../../components/UserReviewForm/UserReviewForm'
 
 export default function MovieDetailPage() {

@@ -21,10 +21,12 @@ export default function HomePage({movies, setMovies}) {
       <div className="mainPortion">
       <div className="TopMovies">
       {movies.map((m)=> (
-            <div className="SearchPosters">
-              <h1> {m.title}</h1>
-              <img src={m.image} alt={m.title} width="300" />
-            </div>
+            <Link to={`/movies/${m.id}`} key={m.id}>
+              <div className="SearchPosters">
+                <h1> {m.title}</h1>
+                <img src={m.image} alt={m.title} width="300" />
+              </div>
+            </Link>
         ))}
       </div>
       </div>

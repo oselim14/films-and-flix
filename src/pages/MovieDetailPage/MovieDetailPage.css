@@ -8,6 +8,7 @@
     background-color: #8ECAE6;
     width: 75%;
     margin: 25px;
+    margin-top: 0;
     height: 35%;
     border: 8px solid #219EBC;
     border-radius: 2vmin;
@@ -30,7 +31,7 @@ aside{
 .TeamAndPic{
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-around;
     margin: 25px
 }
 
