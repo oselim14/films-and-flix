@@ -19,8 +19,8 @@ export default function ReviewForm({viewMovie, setViewMovie}){
         setRating('5')
     }
 
-    async function deleteReview(id, movieId){
-        const review = await reviewsAPI.deleteReview(id);
+    async function deleteReview(id){
+        const review = await reviewsAPI.deleteReview({id});
         setViewMovie(review);
     }
 

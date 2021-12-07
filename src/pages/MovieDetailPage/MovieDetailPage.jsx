@@ -19,7 +19,7 @@ export default function MovieDetailPage() {
             setViewMovie(movie);
         }
         movieDetail();
-    },[])
+    },[]);
 
     if (!viewMovie) return null;
     return(
@@ -29,7 +29,7 @@ export default function MovieDetailPage() {
                     <img src={viewMovie.image} alt={viewMovie.title} width="500"/>
                     <a href={IMDB_LINK} target="_blank">Find it on IMDB</a>
                 </aside>
-                    <div className="right-side">
+                <div className="right-side">
                 <div className="TitleCard">   
                     <h1>{viewMovie.title}</h1> 
                     <div className="Team">
@@ -37,14 +37,15 @@ export default function MovieDetailPage() {
                             <span className="DirectorsTitle">Directors</span><br />
                                 <div>{viewMovie.directors.split(',').map((d, index) => (
                                     <div>{!!index}<br />{d}</div>
-                                ))}</div>
-                            </h4>
+                                    ))}
+                                </div>
+                        </h4>
                         <h4 className="Writers">
                         <span className="WritersTitle">Writers</span><br />
                                 <div>{viewMovie.writers.split(',').map((d, index) => (
                                     <div>{!!index}<br />{d}</div>
                                 ))}</div>
-                            </h4>
+                        </h4>
                         <h4 className="Cast">
                         <span className="CastTitle">Cast</span><br />
                                 <div>{viewMovie.stars.split(',').map((d, index) => (
@@ -53,10 +54,10 @@ export default function MovieDetailPage() {
                         </h4>
                     </div>
                 </div> 
-            <h4 className="Plot"><span className="PlotTitle">Plot</span><br/>{viewMovie.description}</h4>
-            <UserReviewForm viewMovie={viewMovie} setViewMovie={setViewMovie} />
-            </div>
+                <h4 className="Plot"><span className="PlotTitle">Plot</span><br/>{viewMovie.description}</h4>
+                <UserReviewForm viewMovie={viewMovie} setViewMovie={setViewMovie} />
+                </div>
             </div>
         </>
     )
-}
+};
