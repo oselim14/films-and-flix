@@ -145,6 +145,19 @@ tr{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    font-size: 20px;
+    
+}
+
+tbody tr {
+    /* border: solid 1px #fb6c2f; */
+    margin: 5px;
+}
+
+th{
+    font-size: 30px;
+    color: #fb6c2f;
+    font-family: 'Source Code Pro', monospace;
 }
 
 td {
@@ -163,10 +176,56 @@ td {
 
 .DeleteButton {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .Rating {
     display: flex;
     justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .TeamAndPic {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    aside {
+        width: 80vmin;
+        margin: 30px;
+    }
+    .right-side {
+        margin: 0;
+        justify-content: left;
+    }
+
+    img {
+        width: 75vmin;
+    }
+
+    .TitleCard {
+        margin: 25px 0px;
+    }
+
+    .Team{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ReviewsDisplay {
+        width: 75vmin;
+    }
+
+    th {
+        font-size: 18px;
+    }
+
+    tr {
+        width: 75vmin;
+        font-size: 16px;
+    }
 }

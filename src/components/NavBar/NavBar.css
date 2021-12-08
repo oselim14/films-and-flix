@@ -31,3 +31,10 @@ span {
     font-size: 45px;
     text-decoration: none;
 }
+
+@media screen and (max-width: 768px) {
+    Nav{
+        display: flex;
+        flex-direction: column;
+    }
+}

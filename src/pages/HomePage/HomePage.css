@@ -25,3 +25,10 @@
     font-family: 'Permanent Marker', cursive;
     font-size: 35px;
 }
+
+@media screen and (max-width: 768px) {
+    .TopMovies{
+        display: flex;
+        flex-direction: column;
+    }
+}

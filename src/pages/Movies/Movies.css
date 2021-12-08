@@ -55,3 +55,10 @@
     font-size: 35px;
     margin-bottom: 0;
 }
+
+@media screen and (max-width: 768px) {
+    .MovieSearch{
+        display: flex;
+        flex-direction: column;
+    }
+}
