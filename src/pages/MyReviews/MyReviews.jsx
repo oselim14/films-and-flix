@@ -22,8 +22,8 @@ export default function MyReviews() {
       <h1 className="MovieReviews">My Reviews</h1>
       <div className="MainPortionReviews">
         <div className="MovieSearchReviews">
-          {pastReviews.map((m)=> 
-            <div className="SearchPostersReviews">
+          {pastReviews.map((m, idx)=> 
+            <div className="SearchPostersReviews" key={idx}>
               <Link to={`/movies/${m.IMDBid}`} key={m.IMDBid}>
                 <h1>{m.title}</h1>
                 <img src={m.image} alt={m.title} width="300" />

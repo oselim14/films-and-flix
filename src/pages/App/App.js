@@ -8,6 +8,7 @@ import MyReviews from '../MyReviews/MyReviews';
 import Movies from '../Movies/Movies';
 import NavBar from '../../components/NavBar/NavBar';
 import MovieDetailPage from '../../pages/MovieDetailPage/MovieDetailPage';
+import { Navigate } from 'react-router';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -22,12 +23,21 @@ export default function App() {
             {/* client-side route that renders the component instance if the path matches the url in the address bar */}
             <Route path="/movies" element={<Movies movies={movies} setMovies={setMovies}/>} />
             <Route path="/" element={<HomePage movies={movies} setMovies={setMovies}/>} />
-            <Route path="/movies/:id" element={<MovieDetailPage />} />
+            <Route path="/movies/:id" element={<MovieDetailPage  user={user} />} />
             <Route path="/movies/myreviews" element={<MyReviews />} />
           </Routes>
         </>
         :
-        <AuthPage setUser={setUser} />
+        <>
+        <NavBar user={user} setUser={setUser} />
+          <Routes>
+            <Route path="/login" element={<AuthPage setUser={setUser} />} />
+            <Route path="/movies" element={<Movies movies={movies} setMovies={setMovies}/>} />
+            <Route path="/" element={<HomePage movies={movies} setMovies={setMovies}/>} />
+            <Route path="/movies/:id" element={<MovieDetailPage user={user}/>} />
+            <Route path="/*" element={<Navigate to ="/" />} />
+          </Routes>
+        </>
       }
     </main>
   );

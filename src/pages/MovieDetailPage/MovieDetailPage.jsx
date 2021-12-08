@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import './MovieDetailPage.css';
 import UserReviewForm from '../../components/UserReviewForm/UserReviewForm'
 
-export default function MovieDetailPage() {
+export default function MovieDetailPage({user}) {
     
     const [viewMovie, setViewMovie] = useState(null);
     const {id: movieId} = useParams();
@@ -53,7 +53,7 @@ export default function MovieDetailPage() {
                     </div>
                 </div> 
                 <h4 className="Plot"><span className="PlotTitle">Plot</span><br/>{viewMovie.description}</h4>
-                <UserReviewForm viewMovie={viewMovie} setViewMovie={setViewMovie} />
+                <UserReviewForm viewMovie={viewMovie} setViewMovie={setViewMovie} user={user}/>
                 </div>
             </div>
         </>

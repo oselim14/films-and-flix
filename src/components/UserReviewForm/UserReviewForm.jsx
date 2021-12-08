@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as reviewsAPI from '../../utilities/reviews-api';
 
-export default function ReviewForm({viewMovie, setViewMovie}){
+export default function ReviewForm({viewMovie, setViewMovie, user}){
 
     const [review, setReview] = useState('');
     const [rating, setRating] = useState('5');
@@ -27,6 +27,7 @@ export default function ReviewForm({viewMovie, setViewMovie}){
         <>
         <div className="ReviewForm">
             <h2>Add a Review:</h2>
+                {user ? 
                 <form onSubmit={addReview} >
                     <label>Rating: 
                         <select name="rating" value={rating} onChange={(evt)=> setRating(evt.target.value)}>
@@ -41,12 +42,17 @@ export default function ReviewForm({viewMovie, setViewMovie}){
                     <input type="text" name="review" value={review} onChange={(evt)=> setReview(evt.target.value)} /> </label>
                     <button type="submit">Submit Review</button>
                 </form>
+                :
+                <h3>Please Log In to Leave a Review</h3>
+                }
         </div>
             <div className="ReviewsDisplay">
                 <h1 className="ReviewsTitle">Reviews:</h1>
-                <div className="ReviewTable"><span>User</span><span>Review</span><span>Rating</span><span>Delete</span></div>
+                <div className="ReviewTable"><span>User</span><span>Review</span><span>Rating</span>{user ? (user._id === viewMovie.reviews.user) ? (<span>Delete</span>): '' : ''}</div>
                 {viewMovie.reviews.map((r, idx) => 
-                    <div className="ReviewMiddle"><span>{r.userName}</span><span>{r.review}</span><span>{r.rating}</span><button onClick={() => deleteReview(r._id)}>X</button></div>
+                    <>
+                    <div className="ReviewMiddle"><span>{r.userName}</span><span>{r.review}</span><span>{r.rating}</span> {user ? (user._id === r.user) ? (<button onClick={() => deleteReview(r._id)}>X</button>): '' : ''}</div>
+                    </>
                 )}
             </div>
         </>

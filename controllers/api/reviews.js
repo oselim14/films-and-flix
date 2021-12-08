@@ -19,13 +19,14 @@ async function create(req, res) {
 }
 
 async function deleteReview(req, res){
-    const movie = await Movie.findOne({'reviews._id': req.params.id, 'reviews.userId': req.user._id});
+    const movie = await Movie.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id});
     movie.reviews.remove(req.params.id);
     movie.save();
     res.json(movie);
 }
 
 async function index(req, res) {
-    const movies = await Movie.find({'reviews.userId': req.user._id});
+    console.log(req.user._id);
+    const movies = await Movie.find({'reviews.user': req.user._id});
     res.json(movies);
 }
