@@ -1,5 +1,5 @@
 import * as moviesAPI from '../../utilities/movies-api';
-import { useEffect, useState } from 'react/cjs/react.development';
+import { useEffect, useState } from 'react';
 import {useParams} from 'react-router-dom';
 import './MovieDetailPage.css';
 import UserReviewForm from '../../components/UserReviewForm/UserReviewForm'
