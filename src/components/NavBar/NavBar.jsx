@@ -13,7 +13,7 @@ export default function NavBar(props) {
 
   return (
     <>
-    <Link to="/" className="Title">Films&Flix</Link>
+    <Link to="/" className="Title"><img src="https://i.imgur.com/X8Ywuz6.png" alt="logo" height="100px"/></Link>
     <nav>
       <Link to="/movies">Movies</Link>
       &nbsp; | &nbsp;

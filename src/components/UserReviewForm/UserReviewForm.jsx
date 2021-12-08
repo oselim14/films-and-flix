@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import * as reviewsAPI from '../../utilities/reviews-api';
 
 export default function ReviewForm({viewMovie, setViewMovie, user}){
-
+    
     const [review, setReview] = useState('');
     const [rating, setRating] = useState('5');
-
+    
     async function addReview(evt) {
         evt.preventDefault();
         const updatedMovie = await reviewsAPI.create({
@@ -17,12 +17,12 @@ export default function ReviewForm({viewMovie, setViewMovie, user}){
         setReview('');
         setRating('5')
     }
-
+    
     async function deleteReview(id){
         const review = await reviewsAPI.deleteReview({id});
         setViewMovie(review);
     }
-
+    
     return(
         <>
         <div className="ReviewForm">
@@ -48,12 +48,28 @@ export default function ReviewForm({viewMovie, setViewMovie, user}){
         </div>
             <div className="ReviewsDisplay">
                 <h1 className="ReviewsTitle">Reviews:</h1>
-                <div className="ReviewTable"><span>User</span><span>Review</span><span>Rating</span>{user ? (user._id === viewMovie.reviews.user) ? (<span>Delete</span>): '' : ''}</div>
-                {viewMovie.reviews.map((r, idx) => 
                     <>
-                    <div className="ReviewMiddle"><span>{r.userName}</span><span>{r.review}</span><span>{r.rating}</span> {user ? (user._id === r.user) ? (<button onClick={() => deleteReview(r._id)}>X</button>): '' : ''}</div>
+                    <table className="ReviewsTable">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Review</th>
+                                <th>Rating</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {viewMovie.reviews.map((r, idx) => (
+                            <tr key={idx}>
+                                <td>{r.userName}</td>
+                                <td>{r.review}</td>
+                                <td className="Rating">{r.rating}</td>
+                                <td className="DeleteButton">{user ? (user._id === r.user) ? (<button onClick={() => deleteReview(r._id)}>X</button>): <div className="NotUser"></div> : ''  }</td>
+                            </tr>
+                            ))}
+                        </tbody>
+                    </table>
                     </>
-                )}
             </div>
         </>
     )
