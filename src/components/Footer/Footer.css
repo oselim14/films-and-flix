@@ -1,0 +1,21 @@
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h5 {
+    margin: 5px;
+    margin-bottom: 15px;
+    color: white;
+    font-family: 'Permanent Marker', cursive;
+}
+
+a.Title {
+    margin-bottom: 0px;
+}

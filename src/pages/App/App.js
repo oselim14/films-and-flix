@@ -7,6 +7,7 @@ import HomePage from '../HomePage/HomePage';
 import MyReviews from '../MyReviews/MyReviews';
 import Movies from '../Movies/Movies';
 import NavBar from '../../components/NavBar/NavBar';
+import Footer from '../../components/Footer/Footer';
 import MovieDetailPage from '../../pages/MovieDetailPage/MovieDetailPage';
 import { Navigate } from 'react-router';
 
@@ -39,6 +40,8 @@ export default function App() {
           </Routes>
         </>
       }
+      <hr />
+      <Footer />
     </main>
   );
 }
