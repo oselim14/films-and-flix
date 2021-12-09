@@ -10,7 +10,7 @@ router.get('/', moviesCtrl.topMovies);
 router.get('/:IMDBid', moviesCtrl.detail);
 //POST to /api/movies/:id
 router.post('/:id', moviesCtrl.addMovie);
-
+// PUT to /api/:id
 router.put('/:id', moviesCtrl.update);
 
 module.exports = router;

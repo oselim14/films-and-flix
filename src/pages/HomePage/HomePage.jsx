@@ -13,22 +13,21 @@ export default function HomePage({movies, setMovies}) {
       }
       topMovies();
   },[])
- 
 
   return (
     <>
       <h1 className="InTheaters">In Theaters:</h1>
       <div className="mainPortion">
-      <div className="TopMovies">
-      {movies.map((m)=> (
-            <Link to={`/movies/${m.id}`} key={m.id}>
-              <div className="SearchPosters">
-                <h1> {m.title}</h1>
-                <img src={m.image} alt={m.title} width="300" />
-              </div>
-            </Link>
-        ))}
-      </div>
+        <div className="TopMovies">
+        {movies.map((m)=> (
+              <Link to={`/movies/${m.id}`} key={m.id}>
+                <div className="SearchPosters">
+                  <h1> {m.title}</h1>
+                  <img src={m.image} alt={m.title} width="300" />
+                </div>
+              </Link>
+          ))}
+        </div>
       </div>
     </>
   );

@@ -13,13 +13,12 @@
     text-decoration: none;
 }
 
-
-.MovieSearch{
+.MovieSearch {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.MovieSearchForm{
+.MovieSearchForm {
     display: flex;
     justify-self: center;
     background-color: #8ECAE6;
@@ -51,7 +50,7 @@
     font-size: 35px;
 }
 
-.InTheaters{
+.InTheaters {
     font-size: 35px;
     margin-bottom: 0;
 }

@@ -32,23 +32,25 @@ export default function MovieDetailPage({user}) {
                     <h1>{viewMovie.title}</h1> 
                     <div className="Team">
                         <h4 className="Directors">
-                            <span className="DirectorsTitle">Directors</span><br />
-                                <div>{viewMovie.directors.split(',').map((d, index) => (
-                                    <div>{!!index}<br />{d}</div>
-                                    ))}
-                                </div>
+                        <span className="DirectorsTitle">Directors</span><br />
+                            <div>{viewMovie.directors.split(',').map((d, index) => (
+                                <div>{!!index}<br />{d}</div>
+                                ))}
+                            </div>
                         </h4>
                         <h4 className="Writers">
                         <span className="WritersTitle">Writers</span><br />
-                                <div>{viewMovie.writers.split(',').map((d, index) => (
-                                    <div>{!!index}<br />{d}</div>
-                                ))}</div>
+                            <div>{viewMovie.writers.split(',').map((d, index) => (
+                                <div>{!!index}<br />{d}</div>
+                                ))}
+                            </div>
                         </h4>
                         <h4 className="Cast">
                         <span className="CastTitle">Cast</span><br />
-                                <div>{viewMovie.stars.split(',').map((d, index) => (
-                                    <div>{!!index}<br />{d}</div>
-                                ))}</div>
+                            <div>{viewMovie.stars.split(',').map((d, index) => (
+                                <div>{!!index}<br />{d}</div>
+                                ))}
+                            </div>
                         </h4>
                     </div>
                 </div> 

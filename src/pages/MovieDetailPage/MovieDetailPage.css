@@ -4,7 +4,7 @@
     align-items: flex-start;
 }
 
-.TitleCard{
+.TitleCard {
     background-color: #8ECAE6;
     width: 75%;
     margin: 25px;
@@ -14,11 +14,11 @@
     border-radius: 2vmin;
 }
 
-body{
+body {
     display: grid;
 }
 
-aside{
+aside {
     display: flex;
     justify-content: left;
     flex-direction: column;
@@ -30,7 +30,7 @@ aside{
     margin: 25px 50px;
 }
 
-.TeamAndPic{
+.TeamAndPic {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -43,7 +43,6 @@ aside{
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-
 }
 
 .Plot {
@@ -124,14 +123,14 @@ span {
     margin-right: 5px;
 }
 
-.ReviewsTitle{
+.ReviewsTitle {
     font-size: 2em;
     color: white;
     font-family: 'Source Code Pro', monospace;
     align-self: center;
 }
 
-.ReviewsDisplay{
+.ReviewsDisplay {
     align-self: center;
     width: 75%;
 }
@@ -140,21 +139,19 @@ thead, tbody, tr {
     width: 100%;
 }
 
-tr{
+tr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
-    
 }
 
 tbody tr {
-    /* border: solid 1px #fb6c2f; */
     margin: 5px;
 }
 
-th{
+th {
     font-size: 30px;
     color: #fb6c2f;
     font-family: 'Source Code Pro', monospace;
