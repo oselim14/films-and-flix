@@ -32,6 +32,18 @@ span {
     text-decoration: none;
 }
 
+@media screen and (min-width: 789px) {
+    .header.sticky{
+        position: fixed;
+        padding: 10px;
+        transition: all 0.4s ease;
+        top: 0;
+        width: 98%;
+        justify-content: space-evenly;
+    }
+      
+}
+
 @media screen and (max-width: 768px) {
     Nav{
         display: flex;
